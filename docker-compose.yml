@@ -1,0 +1,8 @@
+backend:
+    build: ./
+    ports:
+      - "3000:3000"
+    environment:
+      DATABASE_URL: http://arangodb:8529
+      DATABASE_USER: root
+      DATABASE_PASS: rootpassword

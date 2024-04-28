@@ -28,7 +28,8 @@ docker compose -f docker-composeDB.yml up -d
 # Attendez que la base de données MongoDB soit entièrement opérationnelle avant de continuer
 docker compose up -d --build
 cd ../PawnAppBadFront
-docker compose up -d --build```
+docker compose up -d --build
+```
 
 ## Vulnerability
 

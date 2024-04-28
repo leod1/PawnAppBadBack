@@ -33,16 +33,30 @@ docker compose up -d --build
 
 ## Vulnerability
 
-### SQL Injection
+### AQL Injection (Non vue en cours)
 
-Cette application présente une vulnérabilité d'injection SQL qui peut être exploitée pour manipuler ou accéder illégalement à des données dans la base de données. L'injection SQL peut être testée en insérant des chaînes malveillantes dans les entrées utilisateur qui interagissent avec les requêtes SQL.
+Cette application présente une vulnérabilité d'injection AQL qui peut être exploitée pour manipuler ou accéder illégalement à des données dans la base de données. L'injection AQL peut être testée en insérant des chaînes malveillantes dans les entrées utilisateur qui interagissent avec les requêtes AQL.
 
-#### Test de l'injection SQL
+#### Test de l'injection AQL
 
 Pour tester cette vulnérabilité, vous pouvez essayer d'injecter le payload suivant dans les champs d'utilisateur : " || "1"=="1" || "
 
-Ce payload tente de modifier la logique de la requête SQL pour retourner toujours vrai, ce qui peut être utilisé pour contourner les authentifications ou extraire des informations sensibles de la base de données.
+Ce payload tente de modifier la logique de la requête AQL pour retourner toujours vrai, ce qui peut être utilisé pour contourner les authentifications ou extraire des informations sensibles de la base de données.
 
 ### Brute Force Attack
 
 La méthode de Brute Force est également une vulnérabilité de cette application, permettant aux attaquants de tenter un grand nombre de combinaisons de noms d'utilisateur et de mots de passe jusqu'à ce qu'ils réussissent à obtenir un accès. Cette attaque exploite les systèmes qui n'implémentent pas de mesures de sécurité adéquates comme les limites de tentatives de connexion ou les délais d'attente.
+
+
+## Unsetup
+
+Pour désinstaller l'application et nettoyer votre environnement local, suivez les étapes ci-dessous. Cela arrêtera et supprimera tous les conteneurs Docker utilisés par PawnApp, ainsi que les images Docker, et enfin, supprimera les dossiers contenant les projets clonés.
+```bash
+cd PawnAppBadBack
+docker-compose down
+docker-compose -f docker-composeDB.yml down
+cd ../PawnAppBadFront
+docker-compose down
+cd ../../
+rm -rf tempfolder
+```

@@ -1,6 +1,12 @@
 # PawnApp
 
-Bienvenue sur le repository de PawnApp, une application innovante pour la gestion d'un service de prêt sur gage. Ce document contient toutes les instructions nécessaires pour configurer et lancer les environnements de développement et de production.
+Bienvenue sur le repository de PawnApp, une application créer dans le cadre du séminaire de securiter. Cette application a pour but d'etre vulnérable. voici tous les repo qui laa compose.
+Version vulnérable:
+ - https://github.com/leod1/PawnAppBadFront.git
+ - https://github.com/leod1/PawnAppBadBack.git
+Version patch
+ - https://github.com/leod1/PawnAppGoodFront.git
+ - https://github.com/leod1/PawnAppGoodBack.git
 
 ## Prérequis
 

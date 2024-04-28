@@ -14,7 +14,7 @@ const db = new Database({
   databaseName: process.env.ARANGO_DB_NAME,
   auth: { username: process.env.ARANGO_USER, password: process.env.ARANGO_PASSWORD },
 });
-
+console.log(process.env.ARANGO_URL + process.env.ARANGO_DB_NAME + { username: process.env.ARANGO_USER, password: process.env.ARANGO_PASSWORD })
 // Check database connection and setup collection
 db.get().then(() => {
   console.log('Connected to ArangoDB');

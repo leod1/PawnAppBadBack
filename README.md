@@ -9,7 +9,9 @@ Assurez-vous d'avoir installé les logiciels suivants sur votre machine avant de
 - Docker
 - Docker Compose
 - Git
-#Ports
+
+## Services
+
 db http://localhost:8529  root:defaults
 front http://localhost:8080
 back http://localhost:3000
